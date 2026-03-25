@@ -1,5 +1,6 @@
 /* Imports */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -10,6 +11,7 @@
 :root {
     --max-width: 90rem;
     --text-color: #575757;
+    --light-color: #737373;
     --font-family: "Raleway", sans-serif;
 }
 
@@ -44,7 +46,6 @@ header {
     max-width: var(--max-width);
     justify-content: space-between;
     align-items: center;
-    border: 1px solid red;
 
     & ul {
         display: flex;
@@ -72,7 +73,6 @@ header {
     padding: clamp(1rem, 5vw, 3rem) 1rem;
     max-width: var(--max-width);
     margin: 0 auto;
-    border: 1px solid cyan;
 }
 
 .works {
@@ -87,18 +87,27 @@ header {
     text-align: center;
     gap: 1rem;
 
-    & img {
+    & a, img {
         width: 100%;
         height: 100%;
 
-        &:hover{
+        &:hover {
             opacity: 80%;
         }
+    }
+
+    & h3 {
+        text-decoration: none;
+        color: inherit;
+        font-family: var(--font-family);
+        font-size: 13px;
+        text-transform: uppercase;
+        color: var(--text-color);
+        font-weight: normal;
     }
 }
 
 footer {
-    border: 1px solid green;
     padding: clamp(2rem, 5vw, 3rem);
     display: flex;
     margin: 0 auto;
@@ -154,7 +163,7 @@ footer {
         font-family: var(--font-family);
         color: var(--text-color);
         text-transform: uppercase;
-        
+
     }
 
     & p {
@@ -168,9 +177,10 @@ footer {
     margin: 0 auto;
     display: flex;
     flex-flow: row nowrap;
-    gap: 2rem;
+    gap: 8rem;
     justify-content: center;
-    padding: 2rem;
+    padding: 8rem;
+    height: 65vh;
 }
 
 .contact-section__form form {
@@ -178,11 +188,12 @@ footer {
     flex-direction: column;
     gap: 15px;
     max-width: 600px;
-    width: 100%;
+    width: 30rem;
 
     & input[type="submit"] {
         background-color: black;
         color: beige;
+        padding: 16px 19px;
 
         &:hover {
             opacity: 70%;
@@ -190,22 +201,47 @@ footer {
     }
 }
 
-/* fila doble */
 .form__row {
     display: flex;
     gap: 10px;
 }
 
-/* inputs dentro de la fila */
 .form__row input {
     flex: 1;
 }
 
-/* inputs normales (email, subject, etc) */
 .contact-section__form input,
 .contact-section__form textarea {
     width: 100%;
     box-sizing: border-box;
     padding: 10px;
     border: 1px solid #ccc;
+    background-color: #fafafa;
+}
+
+label {
+    color: var(--light-color);
+}
+
+.contact-section__content {
+    color: var(--text-color);
+
+    & h1 {
+        text-transform: uppercase;
+    }
+
+    & p {
+        color: var(--light-color);
+    }
+}
+
+
+/* Detail illustration */
+
+.detail_illustrations {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 2rem;
+    padding: 2rem;
+
 }
